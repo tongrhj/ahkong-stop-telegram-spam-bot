@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AhKong Bot - Stop Spam in Telegram Groups</title>
+</head>
+<body>
+  Landing Page Placeholder
+
+  <h3>API Endpoint:</h3>
+  <p class="js-output">Loading...</p>
+  <script>
+    (function () {
+      return fetch('/webhook')
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(output) {
+          document.querySelector('.js-output').textContent = output;
+        });
+    })()
+  </script>
+</body>
+</html>
