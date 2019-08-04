@@ -6,7 +6,9 @@
     { "src": "webhook/index.js", "use": "@now/node-server" }
   ],
   "alias": "ahkong",
-  "routes": [
-    { "src": "/", "dest": "www/index.html" }
-  ]
+  "routes": [{ "src": "/", "dest": "www/index.html" }],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": "@telegram-bot-token",
+    "WEBHOOK_SLUG": "@webhook-slug"
+  }
 }
