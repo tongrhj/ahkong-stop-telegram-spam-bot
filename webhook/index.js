@@ -20,12 +20,12 @@ bot.start(ctx => ctx.reply('Hello World'))
 bot.on('message', async (ctx) => {
   const { message } = ctx
   console.log('Received: ', JSON.stringify(message))
-  utils.handleMessage(ctx)(message)
+  await utils.handleMessage(ctx)(message)
 })
 bot.on('edited_message', async (ctx) => {
   const { editedMessage } = ctx
   console.log('Received: ', JSON.stringify(editedMessage))
-  utils.handleMessage(ctx)(editedMessage)
+  await utils.handleMessage(ctx)(editedMessage)
 })
 
 app.get('*', (req, res) => {
