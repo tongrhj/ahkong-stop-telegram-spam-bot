@@ -7,7 +7,7 @@
     "start": "node server.js",
     "lint": "prettier --check \"**/*.{js,json}\"",
     "format": "prettier --write \"**/*.{js,json}\"",
-    "deploy": "vercel --target production"
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -20,7 +20,7 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "vercel": "^23.0.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "vercel": "^23.0.1"
   }
 }
