@@ -10,17 +10,17 @@ app.use(helmet());
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN, {
   telegram: {
     username: "AhKongBot",
-    channelMode: false
-  }
+    channelMode: false,
+  },
 });
 app.use(bot.webhookCallback(`/${process.env.WEBHOOK_SLUG}`));
 // bot.telegram.setWebhook(`https://ahkong.now.sh/${process.env.WEBHOOK_SLUG}`)
 
-bot.start(ctx => {
+bot.start((ctx) => {
   console.log(ctx.message);
   ctx.reply("Hello World");
 });
-bot.on(["message", "edited_message"], async ctx => {
+bot.on(["message", "edited_message"], async (ctx) => {
   const message = ctx.message || ctx.edited_message;
   console.log("Received: ", JSON.stringify(message));
   await utils.handleMessage(ctx)(message);
