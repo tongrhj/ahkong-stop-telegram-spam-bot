@@ -1,27 +1,26 @@
 {
   "name": "ahkong-stop-telegram-spam-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AhKong enforces hard truths in a Telegram community by deleting spam and banning spammers",
-  "main": "server.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node server.js",
     "lint": "prettier --check \"**/*.{js,json}\"",
     "format": "prettier --write \"**/*.{js,json}\"",
-    "deploy": "now --target production"
+    "deploy": "vercel --target production"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "helmet": "^3.20.0",
-    "telegraf": "^3.32.0"
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "telegraf": "^4.4.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "14.x"
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@zeit/ncc": "^0.20.4",
-    "now": "^15.8.7",
-    "prettier": "^1.18.2"
+    "vercel": "^23.0.1",
+    "prettier": "^2.3.2"
   }
 }

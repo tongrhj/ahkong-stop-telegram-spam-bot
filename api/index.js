@@ -37,3 +37,5 @@ app.post(`*`, cors(), (req, res) => {
 app.options("*", cors());
 
 app.listen();
+
+module.exports = app;
